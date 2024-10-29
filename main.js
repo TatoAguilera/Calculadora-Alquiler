@@ -45,12 +45,14 @@ function calcularAumentoAlquiler() {
 
   if(tipoAumento == 'IPC'){
     alquiler = alquiler * ipc * 100
+    alert(`Su alquiler es = ${alquiler.toFixed(2)} y su aumento fue ${ipc}`)
   }else if (tipoAumento == 'ICL'){
     alquiler = alquiler * icl * 100
+    alert(`Su alquiler es = ${alquiler.toFixed(2)} y su aumento fue ${icl}`)
   }else if (tipoAumento == 'AMBOS'){
     alquiler = alquiler * (ipc + icl) * 100
+    alert(`Su alquiler es = ${alquiler.toFixed(2)} y su aumento fue ${ipc + icl}`)
   }
-  alert(`Su alquiler es = ${alquiler.toFixed(2)}`)
 }
 
 // 2: Expensa
@@ -60,7 +62,7 @@ function calcularExpensas(){
     const aumentoExpensa = 0.05 
 
     expensas *= aumentoExpensa * 100
-    alert(`Su expensa es = ${expensas.toFixed(2)}`)
+    alert(`Su expensa es = ${expensas.toFixed(2)} y el aumento fue de ${aumentoExpensa}`)
 }
 
 // 3: Seguridad
@@ -69,5 +71,5 @@ function calcularSeguridad(){
     const aumentoSeguridad = 0.07
 
     seguridad *= aumentoSeguridad * 100
-    alert(`Su seguridad cuesta = ${seguridad.toFixed(2)}`)
+    alert(`Su seguridad cuesta = ${seguridad.toFixed(2)} y su aumento fue de ${aumentoSeguridad}`)
 }
